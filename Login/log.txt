@@ -1,0 +1,2 @@
+0.0.1 - 15/03/2026 21:44 - Criação do esqueleto do projeto e repositório do github
+0.0.0 - 14/03/2026 21:29 - Criação da pasta do projeto
