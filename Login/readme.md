@@ -39,6 +39,8 @@ git clone https://github.com/Joelson-A-Silva/Login-System-html
 
 2. Abra o arquivo `main.html` no navegador.
 
+3. Insira o email "teste@gmail.com" e a senha "123456" 
+
 ## Futuras melhorias
 
 - Sistema de cadastro
