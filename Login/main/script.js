@@ -1,29 +1,52 @@
 function logar(){
-    let email = document.getElementById("email").value;
-    let senha = document.getElementById("senha").value;
-    let form = document.getElementById("formulario")
+    
+    const form = document.getElementById("formulario")
     const aviso0 = document.getElementById("aviso0")
-    const aviso1 = document.getElementById("aviso1")
     
     form.addEventListener('submit', e =>{
         let submitForm = true;
-
-        if(email=="teste@gmail.com"){
-            submitForm = true
-        }else{
+        let email = document.getElementById("email").value;
+        let senha = document.getElementById("senha").value;
+        //dps tem que vê com os caba la como que bota sql kkkkk
+        if(email!=="teste@gmail.com"){
             submitForm=false
-            aviso0.innerText="Email incorreto"
-        }
-        if(senha=="123456"){
-            submitForm = true
-        }else{
+        }if(senha!=="123456"){
             submitForm=false
-            aviso1.innerText="Senha incorreta"
         }
-
         if(!submitForm){
             e.preventDefault();
+            aviso0.innerText="Email ou senha incorretos"
         }
+    })
+    
+}
+function tema(){
+    const botao = document.getElementById('switcher');
+
+    botao.addEventListener('click', () => {
+        let bg = document.body.classList.value
+        let rng =Math.floor(Math.random()*10)+1;
+
+        switch (rng) {
+            case 1:
+                document.body.className = "tema-secreto";
+                break;
         
+            default:
+                switch (bg){
+                case "tema-claro":
+                    document.body.className = "tema-escuro";
+                break
+
+                case "tema-escuro":
+                    document.body.className = "tema-claro";
+                break
+
+                default:
+                document.body.className = "tema-escuro";
+                break;}
+            break;
+        }
+    
     })
 }

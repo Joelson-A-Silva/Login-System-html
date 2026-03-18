@@ -1,7 +1,85 @@
 .tema-claro{
-    --bg:#dbc27c;
+    --bg:#989898;
+
+    --tbg:#93939373;
+    --tbg2:rgba(209, 208, 208, 0.566);
+    --tbg3: rgba(167, 167, 167, 0.625) ;
+
+    --dg1:rgba(209, 208, 208, 0.525);
+    --dg2:rgba(209, 208, 208, 0.611);
+    --dg3:rgba(209, 208, 208, 0.484);
+
+    --dg4:rgba(56, 108, 187, 0.699);
+    --dg5:rgba(37, 146, 171, 0.863);
+    --dg6:rgba(31, 188, 141, 0.699);
+
+    --f1:#1b1b1b;
+    --f2:#bcbcbc;
+    --f3:#3f3f3f;
+
+    --selection:#699898;
+
+    --logar:#13bd84;
+
 }
-/* .tema-escuro{} */
+.tema-escuro{
+    --bg:#121212;
+
+    --tbg:#1f1f1f73;
+    --tbg2:rgba(40, 40, 40, 0.566);
+    --tbg3: rgba(60, 60, 60, 0.625);
+
+    --dg1:rgba(40, 40, 40, 0.525);
+    --dg2:rgba(50, 50, 50, 0.611);
+    --dg3:rgba(35, 35, 35, 0.484);
+
+    --dg4:rgba(56, 108, 187, 0.8);
+    --dg5:rgba(37, 146, 171, 0.9);
+    --dg6:rgba(31, 188, 141, 0.8);
+
+    --f1:#eaeaea;
+    --f2:#888888;
+    --f3:#cfcfcf;
+
+--selection:#3a6f6f;
+
+--logar:#10a874;
+}
+.tema-secreto{
+    --bg:#121212;
+
+    --tbg:#1f1f1f73;
+    --tbg2:rgba(40, 40, 40, 0.566);
+    --tbg3: rgba(60, 60, 60, 0.625);
+
+    --dg1:rgba(40, 40, 40, 0.525);
+    --dg2:rgba(50, 50, 50, 0.611);
+    --dg3:rgba(35, 35, 35, 0.484);
+
+    --dg4: rgba(58, 180, 180, 1);
+    --dg5: rgba(232, 158, 84, 1);
+    --dg6: rgba(69, 115, 252, 1);
+
+    --f1:#eaeaea;
+    --f2:#888888;
+    --f3:#cfcfcf;
+
+    --selection:#ffffffba;
+
+    --logar:#7676765e;
+}
+
+/*Fontes*/
+@font-face {
+    font-family: "Equinox Regular";
+    src: url("../fonts/Equinox Regular.woff");
+}
+@font-face {
+    font-family: "Deltha Regular";
+    src: url("../fonts/Deltha.otf");
+}
+
+/*Main css*/
 
 body{
     background: var(--bg);
@@ -11,7 +89,7 @@ body{
     padding: 0;
 }
 main{
-    background: #550000;
+    background: linear-gradient(20deg, var(--dg4) 10%, var(--dg5) 50%, var(--dg6) 100%);;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -22,13 +100,96 @@ main{
 }
 .Formulario{
     justify-content: center;
-    text-align: center;
+    text-align: start;
     align-items: center;
-    height: 300px;
+    height: auto;
     width: 400px;
-    background: #676767;
+    background: linear-gradient(60deg, var(--dg1),var(--dg2),var(--dg3));
+    padding: 20px;
+    padding-top: 5px;
+    border-style: solid;
+    border-color: var(--tbg2);
+    border-radius: 15px;
+    filter: blur(0px);
 }
 .input{
     display: flex;
     flex-direction: column;
+}
+.login0{
+    text-align: center;
+    font-family: "Deltha Regular";
+    font-size: 70px;
+    height: 100px;
+    color: var(--f1);
+    margin: 0;
+}
+.titulo{
+    height: 150px;
+}
+*{
+    font-family: "Equinox Regular" ;
+    font-size: 19px;
+    color: var(--f3);
+}
+.Box{
+    background: var(--tbg3);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    height: 25px;
+}
+.Box input{
+    background: none;
+    border: 2px solid #ff000000 ;
+    outline: none;
+    width: 300px;
+    border-radius: 5px;
+    height: 22px;
+    justify-content: center;
+    display: flexbox;
+    
+    transition: border 0.2s;
+}
+.Box input:focus{
+    border: 2px solid var(--selection) ;
+}
+.Box label{
+    transition: color 0.2s;
+}
+.Box label:hover{
+    color:var(--selection);
+    cursor: pointer;
+}
+#resetsenha{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 15px;
+
+    transition: background 0.2s;
+}
+#resetsenha:hover{
+    background: var(--tbg2);
+    cursor: pointer;
+}
+.logar{
+    align-items: center;
+    text-align: center;
+}
+#button-login{
+    background: var(--logar) ;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    border-radius: 5px;
+
+    transition: background 0.2s;
+    transition: color 0.2s;
+}
+#button-login:hover{
+    cursor: pointer;
+    background: var(--selection);
+    color: var(--dg2);
 }

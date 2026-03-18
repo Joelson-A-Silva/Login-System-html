@@ -9,24 +9,38 @@
 </head>
 <body class="tema-claro">
     <header>
-        <div class="Buttons"><Button>Voltar</Button></div>
+        <div class="Buttons">
+            <Button>Voltar</Button>
+            <Button onclick="tema()" id="switcher">Claro/Escuro</Button>
+        </div>
     </header>
     <main>
         <div class="Formulario">
             <form action="../btw/btw.html" id="formulario">
             <div class="input">
+            <div class="titulo">
+            <h1 class="login0">LOGIN</h1>
+            </div>
 
+            <div class="Box">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="fulano_silva@gmail.com" autocomplete="off" autocorrect="off">
-            
+            </div>
 
+
+            <div class="Box">
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" placeholder="Senha123">
-            <input type="checkbox" onclick="senha.type = this.checked ? 'text' : 'password' ">
-            <input type="button" value="Redefinir senha">
-            <p id="aviso0"></p>
-            <p id="aviso1"></p>
+            <input type="checkbox" onclick="senha.type = this.checked ? 'text' : 'password' " style="transform: translate(205px,-28px);">
+            </div>
+            
+            <div class="extras">
+            <input type="button" value="Redefinir senha" id="resetsenha">
+            <p id="aviso0" style="text-align: center;"></p>
+            </div>
+            <div class="logar">
             <input type="submit" id="button-login" value="Entrar" onclick="logar()">
+            </div>
 
             </div>
             </form>
